@@ -2,15 +2,18 @@
 # Apache Archiva 2.1.1 Standalone
 #
 
-FROM debian:jessie
+#FROM debian:jessie
+FROM java:7u65
 
 MAINTAINER Olivier Lamy
 
-RUN apt-get update && apt-get clean
-RUN apt-get install -q -y openjdk-7-jre-headless openjdk-7-jdk wget && apt-get clean
+#RUN apt-get update && apt-get clean
+#RUN apt-get install -q -y openjdk-7-jre-headless openjdk-7-jdk wget && apt-get clean
 
-ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
-ENV PATH $JAVA_HOME/bin:$PATH
+RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+
+#ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
+#ENV PATH $JAVA_HOME/bin:$PATH
 
 RUN wget --no-verbose http://archive.apache.org/dist/archiva/2.1.1/binaries/apache-archiva-2.1.1-bin.tar.gz
 
