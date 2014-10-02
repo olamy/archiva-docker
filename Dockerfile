@@ -27,5 +27,5 @@ RUN ln -s /archiva-data /apache-archiva-2.1.1/data
 VOLUME [&quot;/archiva-data&quot;]
 
 EXPOSE 8080
-CMD bin/archiva start
+CMD bin/archiva console
 
