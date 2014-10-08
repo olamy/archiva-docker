@@ -2,8 +2,10 @@
 
 # Usage
 
-```
-docker run -p 8080:8080 archiva
-```
+In order to get the logs with `docker logs` the `-t` option needs to be used.
 
+    docker run -t -p 8080:8080 archiva
 
+# Building
+
+    docker build -t olamy/archiva .
