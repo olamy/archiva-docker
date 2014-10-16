@@ -31,6 +31,7 @@ VOLUME /apache-archiva/data
 VOLUME /apache-archiva/logs
 VOLUME /apache-archiva/repositories
 VOLUME /apache-archiva/temp
+VOLUME /apache-archiva/conf
 
 EXPOSE 8080
 CMD bin/archiva console
